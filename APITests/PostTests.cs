@@ -49,7 +49,7 @@ namespace APITests
             var output = deserialize.Deserialize<PostDto>(response);
 
             var statusCode = (int) response.StatusCode;
-            
+
             Assert.AreEqual(post.Title, output.Title, "Titles must be the same");
             Assert.AreEqual(STATUS_CODE_CREATED, statusCode, "Status code must be 201 - Created with POST Method");
         }

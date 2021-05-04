@@ -31,5 +31,18 @@ namespace APIProject
         public int Id { get => id; set => id = value; }
         public string Title { get => title; set => title = value; }
         public string Body { get => body; set => body = value; }
+
+        public override bool Equals(object obj)
+        {
+            return obj is PostDto dto &&
+                   userId == dto.userId &&
+                   id == dto.id &&
+                   title == dto.title &&
+                   body == dto.body &&
+                   UserId == dto.UserId &&
+                   Id == dto.Id &&
+                   Title == dto.Title &&
+                   Body == dto.Body;
+        }
     }
 }
